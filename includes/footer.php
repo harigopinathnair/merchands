@@ -31,6 +31,13 @@ $base_url = (isset($is_sub_page) && $is_sub_page) ? '../' : './';
                         <li><a href="<?php echo $base_url; ?>disclaimer.php">Disclaimer</a></li>
                     </ul>
                 </div>
+                <div class="footer-col">
+                    <h5>Contact</h5>
+                    <ul>
+                        <li><a href="mailto:support@merchands.com">support@merchands.com</a></li>
+                        <li><a href="tel:919944635089">+91 99446 35089</a></li>
+                    </ul>
+                </div>
             </div>
             <div class="copyright">
                 &copy; 2026 Merchands.com &middot; A Global Business Aggregator &middot; All Rights Reserved.
