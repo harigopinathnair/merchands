@@ -294,14 +294,10 @@ $base_url = (isset($is_sub_page) && $is_sub_page) ? '../' : './';
                 <img src="<?php echo $base_url; ?>logo-merchands.png" alt="Merchands Logo">
             </a>
             <div class="nav-links">
-                <?php if ($base_url == './'): ?>
-                    <a href="logistics/">Logistics</a>
-                    <a href="about.php">About</a>
-                    <a href="#services">Services</a>
-                <?php else: ?>
-                    <a href="#about">About</a>
-                    <a href="#services">Services</a>
-                <?php endif; ?>
+                <a href="<?php echo $base_url; ?>">Home</a>
+                <a href="<?php echo $base_url; ?>about.php">About</a>
+                <a href="<?php echo $base_url; ?>logistics/">Logistics</a>
+                <a href="<?php echo $base_url; ?>register.php" class="btn" style="padding: 10px 25px; font-size: 0.9rem;">Join Us</a>
             </div>
             <a href="tel:919944635089" class="btn" style="padding: 10px 20px; font-size: 0.8rem;">+91 99446 35089</a>
         </div>

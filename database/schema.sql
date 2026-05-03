@@ -45,3 +45,18 @@ VALUES (
   'Admin User',
   'rankmonk@gmail.com'
 );
+
+CREATE TABLE IF NOT EXISTS users (
+  id            INT AUTO_INCREMENT PRIMARY KEY,
+  full_name     VARCHAR(120) NOT NULL,
+  email         VARCHAR(180) UNIQUE NOT NULL,
+  phone         VARCHAR(20),
+  password_hash VARCHAR(255) NOT NULL,
+  role          ENUM('customer','partner','admin') DEFAULT 'customer',
+  company_name  VARCHAR(120),
+  is_active     TINYINT(1) DEFAULT 1,
+  created_at    TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  updated_at    TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  INDEX idx_email (email),
+  INDEX idx_role (role)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
