@@ -11,7 +11,30 @@ include '../includes/header.php';
                 <div class="hero-content">
                     <span class="section-tag">Logistics Hub</span>
                     <h1 class="hero-title">Global Freight Solutions with Precision</h1>
-                    <p style="font-size: 1.2rem; color: var(--slate); margin-bottom: 45px; max-width: 650px;">Connecting you with IATA accredited and Govt. licensed MTO partners. Handling critical cargo globally with precision through our vetted network.</p>
+                    <p style="font-size: 1.1rem; color: var(--slate); margin-bottom: 30px; max-width: 650px; line-height: 1.6;">Your gateway to reliable global freight. Connecting you with vetted partners for seamless worldwide logistics.</p>
+                    
+                    <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 35px;">
+                        <span style="background: rgba(255,255,255,0.05); padding: 6px 15px; border-radius: 4px; font-size: 0.8rem; color: var(--gold); border: 1px solid rgba(184, 138, 94, 0.3); font-weight: 600;">• Sea Freight</span>
+                        <span style="background: rgba(255,255,255,0.05); padding: 6px 15px; border-radius: 4px; font-size: 0.8rem; color: var(--gold); border: 1px solid rgba(184, 138, 94, 0.3); font-weight: 600;">• Air Freight</span>
+                        <span style="background: rgba(255,255,255,0.05); padding: 6px 15px; border-radius: 4px; font-size: 0.8rem; color: var(--gold); border: 1px solid rgba(184, 138, 94, 0.3); font-weight: 600;">• Customs Clearance</span>
+                        <span style="background: rgba(255,255,255,0.05); padding: 6px 15px; border-radius: 4px; font-size: 0.8rem; color: var(--gold); border: 1px solid rgba(184, 138, 94, 0.3); font-weight: 600;">• Multimodal</span>
+                    </div>
+
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 45px;">
+                        <div style="display: flex; align-items: center; gap: 12px; color: white; font-size: 0.9rem;">
+                            <span style="color: #4BB543;">✓</span> IATA Accredited Partners
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 12px; color: white; font-size: 0.9rem;">
+                            <span style="color: #4BB543;">✓</span> Serving 185+ Countries
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 12px; color: white; font-size: 0.9rem;">
+                            <span style="color: #4BB543;">✓</span> Licensed MTO Partners
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 12px; color: white; font-size: 0.9rem;">
+                            <span style="color: #4BB543;">✓</span> 42,300+ Shipments Delivered
+                        </div>
+                    </div>
+
                     <div style="display: flex; gap: 20px;">
                         <a href="#services" class="btn">Our Services</a>
                         <a href="https://wa.me/919944635089" class="btn" style="background: #25D366; color: white; border: none;">WhatsApp Us</a>
