@@ -52,14 +52,14 @@ $base_url = (isset($is_sub_page) && $is_sub_page) ? '../' : './';
             top: 0;
             width: 100%;
             z-index: 1000;
-            padding: 20px 0;
+            padding: 12px 0;
             transition: var(--transition);
             background: var(--white);
             border-bottom: 1px solid rgba(0, 33, 71, 0.08);
         }
 
         nav.scrolled {
-            padding: 12px 0;
+            padding: 8px 0;
             box-shadow: 0 15px 40px rgba(0, 33, 71, 0.08);
         }
 
@@ -70,7 +70,7 @@ $base_url = (isset($is_sub_page) && $is_sub_page) ? '../' : './';
         }
 
         .logo img {
-            height: 48px;
+            height: 40px;
             display: block;
             transition: var(--transition);
         }
@@ -137,8 +137,8 @@ $base_url = (isset($is_sub_page) && $is_sub_page) ? '../' : './';
 
         /* Hero General */
         .hero-section {
-            padding: 180px 0 120px;
-            min-height: 90vh;
+            padding: 140px 0 80px;
+            min-height: 70vh;
             display: flex;
             align-items: center;
             background-size: cover;
