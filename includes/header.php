@@ -137,8 +137,8 @@ $base_url = (isset($is_sub_page) && $is_sub_page) ? '../' : './';
 
         /* Hero General */
         .hero-section {
-            padding: 140px 0 80px;
-            min-height: 70vh;
+            padding: 110px 0 60px;
+            min-height: 60vh;
             display: flex;
             align-items: center;
             background-size: cover;
@@ -156,10 +156,10 @@ $base_url = (isset($is_sub_page) && $is_sub_page) ? '../' : './';
         .hero-section .container { position: relative; z-index: 2; }
 
         .hero-title {
-            font-size: 4rem;
+            font-size: 3.2rem;
             font-weight: 700;
-            line-height: 1.1;
-            margin-bottom: 30px;
+            line-height: 1.15;
+            margin-bottom: 25px;
             background: linear-gradient(to right, #ffffff 30%, var(--gold) 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -169,7 +169,7 @@ $base_url = (isset($is_sub_page) && $is_sub_page) ? '../' : './';
         .form-card {
             background: rgba(255, 255, 255, 0.05);
             backdrop-filter: blur(20px);
-            padding: 45px;
+            padding: 35px;
             border-radius: 16px;
             border: 1px solid rgba(255, 255, 255, 0.1);
             box-shadow: 0 30px 60px rgba(0,0,0,0.4);
@@ -193,9 +193,9 @@ $base_url = (isset($is_sub_page) && $is_sub_page) ? '../' : './';
         }
 
         /* Sections */
-        .section-white { padding: 120px 0; background: var(--white); color: var(--navy); }
-        .section-navy { padding: 120px 0; background: var(--navy); color: var(--white); }
-        .section-light { padding: 120px 0; background: var(--light-bg); color: var(--navy); }
+        .section-white { padding: 80px 0; background: var(--white); color: var(--navy); }
+        .section-navy { padding: 80px 0; background: var(--navy); color: var(--white); }
+        .section-light { padding: 80px 0; background: var(--light-bg); color: var(--navy); }
 
         .section-tag {
             display: inline-block;
