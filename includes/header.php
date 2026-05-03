@@ -210,6 +210,20 @@ $base_url = (isset($is_sub_page) && $is_sub_page) ? '../' : './';
             margin-bottom: 20px;
         }
 
+        .grid-4 {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+        }
+
+        @media (max-width: 1200px) {
+            .grid-4 { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        @media (max-width: 768px) {
+            .grid-4 { grid-template-columns: 1fr; }
+        }
+
         /* Footer */
         footer {
             padding: 100px 0 50px;

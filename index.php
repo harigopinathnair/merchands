@@ -81,7 +81,7 @@ include 'includes/header.php';
                 <p style="color: var(--slate); max-width: 700px; margin: 0 auto; font-size: 1.1rem;">Scaling a business requires more than just capital. It requires a network of reliable service providers working in sync.</p>
             </div>
 
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
+            <div class="grid-4">
                 <a href="logistics/" style="background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.08); padding: 50px; border-radius: 16px; transition: var(--transition); text-decoration: none; color: inherit; display: block;">
                     <div style="font-size: 3rem; margin-bottom: 25px; color: var(--gold);">🚚</div>
                     <h3 style="font-size: 1.6rem; margin-bottom: 15px; color: white;">Global Logistics</h3>
