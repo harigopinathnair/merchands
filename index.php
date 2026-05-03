@@ -18,7 +18,7 @@ include 'includes/header.php';
                 </div>
 
                 <div class="form-card">
-                    <h3 style="margin-bottom: 25px; color: var(--gold); font-size: 1.6rem; font-weight: 700;">Get Free Quote from Our Trusted Partners</h3>
+                    <h3 style="margin-bottom: 15px; color: var(--gold); font-size: 1.3rem; font-weight: 700;">Get Free Quote from Our Trusted Partners</h3>
                     <form id="globalLeadForm">
                         <input type="hidden" name="service_category" id="service_category_input" value="logistics">
                         <div style="margin-bottom: 18px;">

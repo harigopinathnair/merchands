@@ -137,8 +137,8 @@ $base_url = (isset($is_sub_page) && $is_sub_page) ? '../' : './';
 
         /* Hero General */
         .hero-section {
-            padding: 110px 0 60px;
-            min-height: 60vh;
+            padding: 90px 0 50px;
+            min-height: 50vh;
             display: flex;
             align-items: center;
             background-size: cover;

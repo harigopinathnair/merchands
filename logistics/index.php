@@ -19,7 +19,7 @@ include '../includes/header.php';
                 </div>
 
                 <div class="form-card">
-                    <h3 style="margin-bottom: 25px; color: var(--gold); font-size: 1.6rem; font-weight: 700;">Get Free Quote from Our Trusted Partners</h3>
+                    <h3 style="margin-bottom: 15px; color: var(--gold); font-size: 1.3rem; font-weight: 700;">Get Free Quote from Our Trusted Partners</h3>
                     <form id="logisticsLeadForm">
                         <input type="hidden" name="service_category" value="logistics">
                         <input type="hidden" name="shipment_type" id="shipment_type_val" value="sea">
