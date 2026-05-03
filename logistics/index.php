@@ -64,7 +64,7 @@ include '../includes/header.php';
                             <div style="display: flex; flex-wrap: wrap; gap: 12px;">
                                 <div class="pill active" onclick="setPill(this, 'sea')" style="padding: 10px 22px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 30px; font-size: 0.85rem; cursor: pointer; transition: var(--transition); font-weight: 600;">Sea</div>
                                 <div class="pill" onclick="setPill(this, 'air')" style="padding: 10px 22px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 30px; font-size: 0.85rem; cursor: pointer; transition: var(--transition); font-weight: 600;">Air</div>
-                                <div class="pill" onclick="setPill(this, 'project')" style="padding: 10px 22px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 30px; font-size: 0.85rem; cursor: pointer; transition: var(--transition); font-weight: 600;">Project</div>
+                                <div class="pill" onclick="setPill(this, 'cargo')" style="padding: 10px 22px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 30px; font-size: 0.85rem; cursor: pointer; transition: var(--transition); font-weight: 600;">Cargo</div>
                                 <div class="pill" onclick="setPill(this, 'customs')" style="padding: 10px 22px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 30px; font-size: 0.85rem; cursor: pointer; transition: var(--transition); font-weight: 600;">Customs</div>
                             </div>
                         </div>
