@@ -15,7 +15,6 @@
             --gold: #B88A5E;
             --white: #FFFFFF;
             --slate: #8892B0;
-            --light-bg: #F8FAFC;
             --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
@@ -27,8 +26,9 @@
         }
 
         body {
-            background-color: var(--white);
-            color: var(--navy);
+            background-color: var(--navy);
+            color: var(--white);
+            overflow-x: hidden;
             line-height: 1.6;
         }
 
@@ -38,7 +38,7 @@
             padding: 0 20px;
         }
 
-        /* Navigation */
+        /* Navbar */
         nav {
             position: fixed;
             top: 0;
@@ -82,22 +82,27 @@
         /* Hero */
         .about-hero {
             padding: 180px 0 100px;
-            background: linear-gradient(rgba(0, 33, 71, 0.8), rgba(0, 33, 71, 0.8)), url('about_us_hero_1777805837847.png');
+            background: linear-gradient(rgba(0, 33, 71, 0.9), rgba(0, 33, 71, 0.9)), url('about_us_hero_1777805837847.png');
             background-size: cover;
             background-position: center;
-            color: var(--white);
             text-align: center;
         }
 
         .about-hero h1 {
             font-size: 3.5rem;
             font-weight: 700;
-            margin-bottom: 20px;
+            margin-bottom: 25px;
+            background: linear-gradient(to right, #fff, var(--gold));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            line-height: 1.1;
         }
 
         /* Content */
         .section {
             padding: 100px 0;
+            background: var(--white);
+            color: var(--navy);
         }
 
         .content-grid {
@@ -107,16 +112,9 @@
             align-items: center;
         }
 
-        .vision-mission {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-            margin-top: 60px;
-        }
-
         .card {
             padding: 40px;
-            background: var(--light-bg);
+            background: #f8fafc;
             border-radius: 12px;
             border-left: 5px solid var(--gold);
         }
@@ -131,6 +129,7 @@
             padding: 80px 0 40px;
             background: var(--navy);
             color: var(--white);
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
         }
 
         .footer-grid {
@@ -155,7 +154,7 @@
         }
 
         .footer-col ul li a {
-            color: rgba(255,255,255,0.5);
+            color: rgba(255, 255, 255, 0.5);
             text-decoration: none;
             transition: var(--transition);
         }
@@ -168,8 +167,8 @@
             text-align: center;
             padding-top: 40px;
             margin-top: 60px;
-            border-top: 1px solid rgba(255,255,255,0.05);
-            color: rgba(255,255,255,0.3);
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            color: rgba(255, 255, 255, 0.3);
             font-size: 0.9rem;
         }
     </style>
@@ -193,7 +192,7 @@
     <header class="about-hero">
         <div class="container">
             <h1>Our Story & Future</h1>
-            <p style="font-size: 1.2rem; opacity: 0.8; max-width: 700px; margin: 0 auto;">Powering global business through a unified ecosystem of trusted services.</p>
+            <p style="font-size: 1.2rem; color: var(--slate); max-width: 700px; margin: 0 auto;">Powering global business through a unified ecosystem of trusted services.</p>
         </div>
     </header>
 
@@ -202,25 +201,23 @@
             <div class="content-grid">
                 <div>
                     <h2 style="font-size: 2.5rem; margin-bottom: 30px;">A Division of Trisora Group</h2>
-                    <p style="margin-bottom: 20px;">Merchands.com is more than just an aggregator; we are an ecosystem designed for the modern global enterprise. As part of the Trisora Group, we inherit a legacy of operational excellence and strategic growth.</p>
-                    <p>We connect the dots between fragmented industries—Logistics, Manufacturing, Recruitment, and IT—creating a single, seamless window for businesses to scale beyond borders.</p>
+                    <p style="margin-bottom: 20px; color: #444;">Merchands.com is more than just an aggregator; we are an ecosystem designed for the modern global enterprise. As part of the Trisora Group, we inherit a legacy of operational excellence.</p>
+                    <p style="color: #666;">We connect the dots between fragmented industries—Logistics, Manufacturing, Recruitment, and IT—creating a single, seamless window for businesses to scale beyond borders.</p>
                 </div>
                 <div style="background: var(--navy); padding: 50px; border-radius: 20px; color: white;">
                     <h3 style="color: var(--gold); margin-bottom: 20px;">Why We Exist</h3>
-                    <p style="line-height: 1.8;">The world of global trade is fragmented. Businesses struggle with unreliable vendors and inefficient processes. We exist to solve that by providing a verified, intelligent marketplace where every connection is a step toward growth.</p>
+                    <p style="line-height: 1.8; opacity: 0.8;">The world of global trade is fragmented. Businesses struggle with unreliable vendors and inefficient processes. We exist to solve that by providing a verified, intelligent marketplace where every connection is a step toward growth.</p>
                 </div>
             </div>
 
-            <div class="vision-mission" id="vision">
-                <div class="card">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 60px;">
+                <div class="card" id="vision">
                     <h3>Vision</h3>
-                    <p>To become the most trusted and comprehensive business ecosystem where companies can seamlessly discover, connect, and grow, by accessing the right suppliers, service providers, and opportunities under one unified platform.</p>
-                    <p style="margin-top: 15px;">We envision a future where businesses no longer struggle with fragmented sourcing or inefficient processes.</p>
+                    <p style="color: #444;">To become the most trusted and comprehensive business ecosystem where companies can seamlessly discover, connect, and grow, by accessing the right suppliers and opportunities under one unified platform.</p>
                 </div>
                 <div class="card" id="mission">
                     <h3>Mission</h3>
-                    <p>To simplify and empower business operations by creating a centralized platform that connects businesses with verified suppliers and service providers, enabling faster and smarter decision-making through transparency and data.</p>
-                    <p style="margin-top: 15px;">Supporting businesses of all sizes from startups to enterprises in scaling efficiently through trusted long-term partnerships.</p>
+                    <p style="color: #444;">To simplify and empower business operations by creating a centralized platform that connects businesses with verified providers, enabling faster and smarter decision-making through transparency.</p>
                 </div>
             </div>
         </div>
