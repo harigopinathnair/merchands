@@ -84,25 +84,45 @@ include '../includes/header.php';
                 <h2 style="font-size: 3rem;">Precision Logistics Services</h2>
             </div>
             <div class="grid-4">
-                <div style="background: white; padding: 50px; border-radius: 16px; transition: var(--transition); box-shadow: 0 10px 30px rgba(0,0,0,0.03); border: 1px solid rgba(0,33,71,0.05);">
-                    <span style="font-size: 3.5rem; margin-bottom: 30px; display: block;">🚢</span>
-                    <h3 style="font-size: 1.5rem; margin-bottom: 20px;">Sea Freight</h3>
-                    <p style="color: #666; line-height: 1.7;">FCL and LCL solutions for major worldwide ports with real-time tracking.</p>
+                <div style="background: white; padding: 40px; border-radius: 16px; transition: var(--transition); box-shadow: 0 10px 30px rgba(0,0,0,0.03); border: 1px solid rgba(0,33,71,0.05); text-align: center;">
+                    <span style="font-size: 3rem; margin-bottom: 25px; display: block;">🚢</span>
+                    <h3 style="font-size: 1.3rem; margin-bottom: 15px; color: var(--navy);">Sea Freight</h3>
+                    <p style="color: #666; line-height: 1.6; font-size: 0.9rem;">Global FCL & LCL services with major carriers.</p>
                 </div>
-                <div style="background: white; padding: 50px; border-radius: 16px; transition: var(--transition); box-shadow: 0 10px 30px rgba(0,0,0,0.03); border: 1px solid rgba(0,33,71,0.05);">
-                    <span style="font-size: 3.5rem; margin-bottom: 30px; display: block;">✈️</span>
-                    <h3 style="font-size: 1.5rem; margin-bottom: 20px;">Air Freight</h3>
-                    <p style="color: #666; line-height: 1.7;">Priority cargo handling for time-sensitive shipments across continents.</p>
+                <div style="background: white; padding: 40px; border-radius: 16px; transition: var(--transition); box-shadow: 0 10px 30px rgba(0,0,0,0.03); border: 1px solid rgba(0,33,71,0.05); text-align: center;">
+                    <span style="font-size: 3rem; margin-bottom: 25px; display: block;">✈️</span>
+                    <h3 style="font-size: 1.3rem; margin-bottom: 15px; color: var(--navy);">Air Freight</h3>
+                    <p style="color: #666; line-height: 1.6; font-size: 0.9rem;">Priority and economy air shipping worldwide.</p>
                 </div>
-                <div style="background: white; padding: 50px; border-radius: 16px; transition: var(--transition); box-shadow: 0 10px 30px rgba(0,0,0,0.03); border: 1px solid rgba(0,33,71,0.05);">
-                    <span style="font-size: 3.5rem; margin-bottom: 30px; display: block;">🏗️</span>
-                    <h3 style="font-size: 1.5rem; margin-bottom: 20px;">Project Cargo</h3>
-                    <p style="color: #666; line-height: 1.7;">Specialized management for heavy lift and oversized industrial equipment.</p>
+                <div style="background: white; padding: 40px; border-radius: 16px; transition: var(--transition); box-shadow: 0 10px 30px rgba(0,0,0,0.03); border: 1px solid rgba(0,33,71,0.05); text-align: center;">
+                    <span style="font-size: 3rem; margin-bottom: 25px; display: block;">📄</span>
+                    <h3 style="font-size: 1.3rem; margin-bottom: 15px; color: var(--navy);">Customs Clearance</h3>
+                    <p style="color: #666; line-height: 1.6; font-size: 0.9rem;">In-house licensed customs brokerage experts.</p>
                 </div>
-                <div style="background: white; padding: 50px; border-radius: 16px; transition: var(--transition); box-shadow: 0 10px 30px rgba(0,0,0,0.03); border: 1px solid rgba(0,33,71,0.05);">
-                    <span style="font-size: 3.5rem; margin-bottom: 30px; display: block;">📄</span>
-                    <h3 style="font-size: 1.5rem; margin-bottom: 20px;">Customs</h3>
-                    <p style="color: #666; line-height: 1.7;">Licensed customs brokerage ensuring seamless cross-border compliance.</p>
+                <div style="background: white; padding: 40px; border-radius: 16px; transition: var(--transition); box-shadow: 0 10px 30px rgba(0,0,0,0.03); border: 1px solid rgba(0,33,71,0.05); text-align: center;">
+                    <span style="font-size: 3rem; margin-bottom: 25px; display: block;">🛡️</span>
+                    <h3 style="font-size: 1.3rem; margin-bottom: 15px; color: var(--navy);">Special Cargo</h3>
+                    <p style="color: #666; line-height: 1.6; font-size: 0.9rem;">Careful handling for fragile or hazardous goods.</p>
+                </div>
+                <div style="background: white; padding: 40px; border-radius: 16px; transition: var(--transition); box-shadow: 0 10px 30px rgba(0,0,0,0.03); border: 1px solid rgba(0,33,71,0.05); text-align: center;">
+                    <span style="font-size: 3rem; margin-bottom: 25px; display: block;">🔄</span>
+                    <h3 style="font-size: 1.3rem; margin-bottom: 15px; color: var(--navy);">Multimodal</h3>
+                    <p style="color: #666; line-height: 1.6; font-size: 0.9rem;">Seamless sea-air-land logistics integration.</p>
+                </div>
+                <div style="background: white; padding: 40px; border-radius: 16px; transition: var(--transition); box-shadow: 0 10px 30px rgba(0,0,0,0.03); border: 1px solid rgba(0,33,71,0.05); text-align: center;">
+                    <span style="font-size: 3rem; margin-bottom: 25px; display: block;">🏗️</span>
+                    <h3 style="font-size: 1.3rem; margin-bottom: 15px; color: var(--navy);">Project Cargo</h3>
+                    <p style="color: #666; line-height: 1.6; font-size: 0.9rem;">Heavy lift and oversized cargo specialized solutions.</p>
+                </div>
+                <div style="background: white; padding: 40px; border-radius: 16px; transition: var(--transition); box-shadow: 0 10px 30px rgba(0,0,0,0.03); border: 1px solid rgba(0,33,71,0.05); text-align: center;">
+                    <span style="font-size: 3rem; margin-bottom: 25px; display: block;">🏪</span>
+                    <h3 style="font-size: 1.3rem; margin-bottom: 15px; color: var(--navy);">Warehousing</h3>
+                    <p style="color: #666; line-height: 1.6; font-size: 0.9rem;">Secure storage and efficient last-mile delivery.</p>
+                </div>
+                <div style="background: white; padding: 40px; border-radius: 16px; transition: var(--transition); box-shadow: 0 10px 30px rgba(0,0,0,0.03); border: 1px solid rgba(0,33,71,0.05); text-align: center;">
+                    <span style="font-size: 3rem; margin-bottom: 25px; display: block;">♻️</span>
+                    <h3 style="font-size: 1.3rem; margin-bottom: 15px; color: var(--navy);">Reverse Logistics</h3>
+                    <p style="color: #666; line-height: 1.6; font-size: 0.9rem;">Streamlined return and recycling processes.</p>
                 </div>
             </div>
         </div>
