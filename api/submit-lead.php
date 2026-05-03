@@ -1,7 +1,7 @@
 <?php
 // merchands/api/submit-lead.php
 
-require_once '../../includes/db.php';
+require_once '../includes/db.php';
 
 header('Content-Type: application/json');
 header('Access-Control-Allow-Origin: ' . (isset($_SERVER['HTTP_HOST']) ? 'http://' . $_SERVER['HTTP_HOST'] : '*'));
@@ -26,7 +26,8 @@ $name = trim($input['name'] ?? '');
 $phone = trim($input['phone'] ?? '');
 $email = trim($input['email'] ?? '');
 $company = trim($input['company'] ?? '');
-$shipment_type = $input['shipment_type'] ?? '';
+$service_category = trim($input['service_category'] ?? 'logistics');
+$shipment_type = $input['shipment_type'] ?? ($service_category === 'logistics' ? 'other' : null);
 $origin = trim($input['origin'] ?? '');
 $destination = trim($input['destination'] ?? '');
 $message = trim($input['message'] ?? '');
@@ -37,9 +38,6 @@ $utm_campaign = trim($input['utm_campaign'] ?? '');
 if (empty($name)) $errors['name'] = 'Full name is required';
 if (empty($phone) || strlen($phone) < 7) $errors['phone'] = 'Valid phone number is required';
 if (empty($email) || !filter_var($email, FILTER_VALIDATE_EMAIL)) $errors['email'] = 'Valid business email is required';
-if (!in_array($shipment_type, ['sea', 'air', 'project', 'customs', 'other'])) {
-    $errors['shipment_type'] = 'Please select a valid shipment type';
-}
 
 if (!empty($errors)) {
     http_response_code(422);
@@ -52,9 +50,9 @@ try {
     $ref_id = 'MRC-' . strtoupper(substr(uniqid(), -6));
     $ip_address = $_SERVER['HTTP_X_FORWARDED_FOR'] ?? $_SERVER['REMOTE_ADDR'] ?? '0.0.0.0';
 
-    $stmt = $pdo->prepare("INSERT INTO leads (ref_id, name, phone, email, company, shipment_type, origin, destination, message, utm_source, utm_campaign, ip_address) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+    $stmt = $pdo->prepare("INSERT INTO leads (ref_id, service_category, name, phone, email, company, shipment_type, origin, destination, message, utm_source, utm_campaign, ip_address) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
     $stmt->execute([
-        $ref_id, $name, $phone, $email, $company, $shipment_type, $origin, $destination, $message, $utm_source, $utm_campaign, $ip_address
+        $ref_id, $service_category, $name, $phone, $email, $company, $shipment_type, $origin, $destination, $message, $utm_source, $utm_campaign, $ip_address
     ]);
 
     // Trigger notification
