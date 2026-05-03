@@ -1,7 +1,7 @@
 <?php
 // merchands/api/submit-lead.php
 
-require_once '../includes/db.php';
+require_once '../../includes/db.php';
 
 header('Content-Type: application/json');
 header('Access-Control-Allow-Origin: ' . (isset($_SERVER['HTTP_HOST']) ? 'http://' . $_SERVER['HTTP_HOST'] : '*'));

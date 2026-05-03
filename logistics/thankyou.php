@@ -1,7 +1,7 @@
 <?php
 // merchands/thankyou.php
 
-require_once 'includes/db.php';
+require_once '../includes/db.php';
 
 $ref_id = $_GET['ref'] ?? '';
 if (empty($ref_id)) {
