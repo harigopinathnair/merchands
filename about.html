@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Merchands.com</title>
+    <meta name="description" content="Learn about Merchands.com, a division of Trisora Group. Our vision is to become the most trusted business ecosystem for global growth.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --navy: #0A192F;
+            --gold: #C5A059;
+            --white: #FFFFFF;
+            --slate: #8892B0;
+            --glass: rgba(255, 255, 255, 0.05);
+            --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Outfit', sans-serif;
+        }
+
+        body {
+            background-color: var(--navy);
+            color: var(--white);
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        /* Navbar */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            padding: 20px 0;
+            transition: var(--transition);
+            background: rgba(10, 25, 47, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(197, 160, 89, 0.2);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .nav-flex {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--gold);
+            text-decoration: none;
+            letter-spacing: -1px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover {
+            color: var(--gold);
+        }
+
+        /* Hero */
+        .hero {
+            position: relative;
+            height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(rgba(10, 25, 47, 0.8), rgba(10, 25, 47, 0.8)), url('about_us_hero_1777805837847.png');
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+            padding-top: 80px;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            font-weight: 700;
+            background: linear-gradient(to right, #fff, var(--gold));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Content Sections */
+        .section {
+            padding: 100px 0;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .text-block h2 {
+            font-size: 2.5rem;
+            color: var(--gold);
+            margin-bottom: 25px;
+        }
+
+        .text-block p {
+            font-size: 1.1rem;
+            color: var(--slate);
+            margin-bottom: 20px;
+        }
+
+        .card {
+            background: var(--glass);
+            padding: 40px;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: var(--transition);
+        }
+
+        .card:hover {
+            border-color: var(--gold);
+            transform: translateY(-5px);
+        }
+
+        .card h3 {
+            color: var(--gold);
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+        }
+
+        .card p {
+            color: var(--slate);
+        }
+
+        /* Footer */
+        footer {
+            padding: 60px 0 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h5 {
+            color: var(--white);
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a {
+            color: var(--slate);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--gold);
+        }
+
+        .copyright {
+            text-align: center;
+            color: var(--slate);
+            font-size: 0.85rem;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            .content-grid { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: 1fr; }
+            .nav-links { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="container nav-flex">
+            <a href="/" class="logo">MERCHANDS</a>
+            <div class="nav-links">
+                <a href="/">Home</a>
+                <a href="/logistics">Logistics</a>
+                <a href="/about.html">About</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="container">
+            <h1>About Merchands.com</h1>
+        </div>
+    </header>
+
+    <section class="section">
+        <div class="container">
+            <div class="content-grid">
+                <div class="text-block">
+                    <h2>Our Story</h2>
+                    <p>Merchands.com is a division of the Trisora Group, a diversified enterprise with a strong presence across industries including e-commerce, media, real estate, jewellery, FMCG, SaaS, and B2B business services.</p>
+                    <p>Built with a deep understanding of modern business challenges, Merchands.com serves as a unified platform designed to support businesses at every stage of their journey, whether it is sourcing reliable suppliers, finding specialized service providers, or discovering new growth opportunities, bringing everything together in one place.</p>
+                </div>
+                <div class="card">
+                    <p>In today’s fast-paced business environment, companies often struggle with scattered vendor networks, inconsistent quality, and time-consuming processes. Merchands.com addresses this gap by offering a curated, structured, and scalable ecosystem where businesses can operate with confidence.</p>
+                    <p style="margin-top: 20px;">Backed by the multi-industry expertise of Trisora Group, the platform is designed not just as a directory, but as a growth engine for businesses, enabling meaningful connections, operational efficiency, and long-term success.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" style="background: rgba(197, 160, 89, 0.03);">
+        <div class="container">
+            <div class="content-grid">
+                <div class="card">
+                    <h3>Our Vision</h3>
+                    <p>To become the most trusted and comprehensive business ecosystem where companies can seamlessly discover, connect, and grow, by accessing the right suppliers, service providers, and opportunities under one unified platform.</p>
+                    <p style="margin-top: 15px;">We envision a future where businesses no longer struggle with fragmented sourcing, unreliable vendors, or inefficient processes, where everything they need to operate and scale exists in one intelligent, connected marketplace.</p>
+                </div>
+                <div class="card">
+                    <h3>Our Mission</h3>
+                    <p>At Merchands.com, our mission is to simplify and empower business operations by creating a centralized platform that connects businesses with verified suppliers and service providers, enabling faster and smarter decision-making through transparency, data, and insights.</p>
+                    <p style="margin-top: 15px;">We support businesses of all sizes from startups to enterprises in scaling efficiently, building a trusted ecosystem that prioritizes reliability, quality, and long-term partnerships, and leveraging technology to reduce friction in sourcing, collaboration, and execution.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="/" class="logo">MERCHANDS</a>
+                    <p style="margin-top: 20px; color: var(--slate);">The global aggregator for enterprise growth services. Powering the world's most ambitious businesses since 2009.</p>
+                </div>
+                <div class="footer-col">
+                    <h5>Solutions</h5>
+                    <ul>
+                        <li><a href="/logistics">Logistics Hub</a></li>
+                        <li><a href="#">Manufacturing</a></li>
+                        <li><a href="#">Recruitment</a></li>
+                        <li><a href="#">IT & Digital</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h5>Company</h5>
+                    <ul>
+                        <li><a href="/about.html">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h5>Contact</h5>
+                    <ul>
+                        <li><a href="mailto:support@merchands.com">support@merchands.com</a></li>
+                        <li><a href="tel:919944635089">+91 99446 35089</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2026 Merchands.com &middot; A Global Business Aggregator &middot; All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
