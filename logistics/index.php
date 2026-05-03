@@ -37,7 +37,7 @@ include '../includes/header.php';
 
                     <div style="display: flex; gap: 20px;">
                         <a href="#services" class="btn">Our Services</a>
-                        <a href="https://wa.me/919944635089" class="btn" style="background: #25D366; color: white; border: none;">WhatsApp Us</a>
+                        <a href="https://wa.me/919944635089" class="btn" style="background: #25D366; color: white; border: none;">Chat with an Expert</a>
                     </div>
                 </div>
 
