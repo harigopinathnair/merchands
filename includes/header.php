@@ -1,4 +1,5 @@
 <?php
+session_start();
 $base_url = (isset($is_sub_page) && $is_sub_page) ? '../' : './';
 ?>
 <!DOCTYPE html>
@@ -294,10 +295,14 @@ $base_url = (isset($is_sub_page) && $is_sub_page) ? '../' : './';
                 <img src="<?php echo $base_url; ?>logo-merchands.png" alt="Merchands Logo">
             </a>
             <div class="nav-links">
-                <a href="<?php echo $base_url; ?>">Home</a>
+                <?php if (!(isset($is_sub_page) && $is_sub_page)): ?>
+                    <a href="<?php echo $base_url; ?>">Home</a>
+                <?php endif; ?>
                 <a href="<?php echo $base_url; ?>about.php">About</a>
                 <a href="<?php echo $base_url; ?>logistics/">Logistics</a>
-                <a href="<?php echo $base_url; ?>register.php" class="btn" style="padding: 10px 25px; font-size: 0.9rem;">Join Us</a>
+                <?php if (basename($_SERVER['PHP_SELF']) == 'index.php' || (isset($_SESSION['form_submitted']) && $_SESSION['form_submitted'])): ?>
+                    <a href="<?php echo $base_url; ?>register.php" class="btn" style="padding: 10px 25px; font-size: 0.9rem;">Join Us</a>
+                <?php endif; ?>
             </div>
             <a href="tel:919944635089" class="btn" style="padding: 10px 20px; font-size: 0.8rem;">+91 99446 35089</a>
         </div>

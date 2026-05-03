@@ -1,6 +1,6 @@
 <?php
-// merchands/thankyou.php
-
+session_start();
+$_SESSION['form_submitted'] = true;
 require_once '../includes/db.php';
 
 $ref_id = $_GET['ref'] ?? '';
