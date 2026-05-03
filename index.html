@@ -5,16 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Merchands.com | Global B2B Service Aggregator</title>
     <meta name="description" content="Merchands.com is your global partner for integrated B2B solutions. From Logistics to Manufacturing and Recruitment, we power your growth.">
+    <link rel="icon" type="image/png" href="merchands-favicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --navy: #0A192F;
-            --gold: #C5A059;
+            --navy: #002147;
+            --gold: #B88A5E;
             --white: #FFFFFF;
             --slate: #8892B0;
-            --glass: rgba(255, 255, 255, 0.05);
+            --glass: rgba(0, 33, 71, 0.05);
             --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
@@ -38,9 +39,10 @@
             top: 0;
             width: 100%;
             z-index: 1000;
-            padding: 20px 0;
+            padding: 15px 0;
             transition: var(--transition);
-            background: transparent;
+            background: var(--white);
+            border-bottom: 1px solid rgba(0, 33, 71, 0.1);
         }
 
         nav.scrolled {
@@ -76,10 +78,10 @@
         }
 
         .nav-links a {
-            color: var(--white);
+            color: var(--navy);
             text-decoration: none;
-            font-weight: 500;
-            font-size: 0.9rem;
+            font-weight: 600;
+            font-size: 0.85rem;
             text-transform: uppercase;
             letter-spacing: 1px;
             transition: var(--transition);
@@ -315,7 +317,9 @@
 
     <nav id="navbar">
         <div class="container nav-flex">
-            <a href="./" class="logo">MERCHANDS</a>
+            <a href="./" class="logo">
+                <img src="logo-merchands.png" alt="Merchands Logo" style="height: 50px; display: block;">
+            </a>
             <div class="nav-links">
                 <a href="logistics/">Logistics</a>
                 <a href="about.html">About</a>
