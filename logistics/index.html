@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Global Freight Solutions | Merchands.com Logistics</title>
+    <title>Logistics Hub | Merchands.com</title>
     <meta name="description" content="Your trusted logistics company for global freight solutions. IATA accredited, Govt. licensed MTO, and licensed Customs Broker since 2009.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,6 +11,7 @@
     <style>
         :root {
             --navy: #0A2240;
+            --navy-light: #153259;
             --accent-blue: #1E6FBB;
             --cta-orange: #E8620A;
             --slate: #F4F6F9;
@@ -40,15 +41,15 @@
             top: 0;
             width: 100%;
             z-index: 1000;
-            padding: 20px 0;
+            padding: 25px 0;
             transition: var(--transition);
-            background: transparent;
         }
 
         nav.scrolled {
-            background: var(--white);
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
             padding: 15px 0;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 30px rgba(0,0,0,0.08);
         }
 
         .container {
@@ -64,21 +65,26 @@
         }
 
         .logo {
-            font-size: 1.5rem;
+            font-size: 1.6rem;
             font-weight: 700;
             color: var(--white);
             text-decoration: none;
-            transition: var(--transition);
+            letter-spacing: -0.5px;
         }
 
         nav.scrolled .logo {
             color: var(--navy);
         }
 
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+
         .nav-links {
             display: flex;
-            gap: 30px;
-            align-items: center;
+            gap: 25px;
         }
 
         .nav-links a {
@@ -102,12 +108,13 @@
             align-items: center;
             justify-content: center;
             padding: 12px 28px;
-            border-radius: 4px;
+            border-radius: 6px;
             font-weight: 600;
             text-decoration: none;
             transition: var(--transition);
             cursor: pointer;
             border: none;
+            font-size: 0.95rem;
         }
 
         .btn-orange {
@@ -117,130 +124,152 @@
 
         .btn-orange:hover {
             transform: translateY(-2px);
-            box-shadow: 0 6px 15px rgba(232, 98, 10, 0.3);
+            box-shadow: 0 8px 20px rgba(232, 98, 10, 0.3);
         }
 
         /* Hero Section */
         .hero {
             position: relative;
-            height: 90vh;
+            min-height: 80vh;
             background: linear-gradient(rgba(10, 34, 64, 0.8), rgba(10, 34, 64, 0.8)), url('../logistics_premium_hero_1777805927376.png');
             background-size: cover;
             background-position: center;
             display: flex;
             align-items: center;
             color: var(--white);
-            padding-top: 80px;
+            padding: 120px 0 80px;
+            text-align: center;
         }
 
-        .hero-grid {
-            display: grid;
-            grid-template-columns: 1.2fr 0.8fr;
-            gap: 60px;
-            align-items: center;
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
         }
 
-        .hero-content h1 {
+        .hero h1 {
             font-size: 3.5rem;
             font-weight: 700;
             line-height: 1.1;
             margin-bottom: 25px;
+            letter-spacing: -1px;
         }
 
-        .hero-content p {
+        .hero p {
             font-size: 1.25rem;
             color: rgba(255, 255, 255, 0.8);
             margin-bottom: 40px;
-            max-width: 600px;
         }
 
-        .trust-strip-hero {
+        .hero-stats {
             display: flex;
-            gap: 30px;
-            margin-bottom: 50px;
+            justify-content: center;
+            gap: 50px;
+            margin-top: 50px;
         }
 
-        .trust-item-hero {
-            display: flex;
-            flex-direction: column;
+        .hero-stat-item {
+            text-align: center;
         }
 
-        .trust-item-hero span:first-child {
-            font-size: 1.8rem;
+        .hero-stat-item div:first-child {
+            font-size: 2.2rem;
             font-weight: 700;
             color: var(--cta-orange);
+            margin-bottom: 5px;
         }
 
-        .trust-item-hero span:last-child {
+        .hero-stat-item div:last-child {
             font-size: 0.8rem;
             text-transform: uppercase;
-            letter-spacing: 1px;
-            color: rgba(255, 255, 255, 0.6);
+            letter-spacing: 2px;
+            color: rgba(255,255,255,0.6);
         }
 
-        /* Quote Form Card */
+        /* Form Section */
+        .quote-section {
+            padding: 0;
+            margin-top: -60px;
+            position: relative;
+            z-index: 10;
+        }
+
         .quote-card {
             background: var(--white);
-            padding: 40px;
-            border-radius: 8px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
-            color: var(--text-dark);
+            padding: 50px;
+            border-radius: 12px;
+            box-shadow: 0 30px 60px rgba(0,0,0,0.12);
+            max-width: 1000px;
+            margin: 0 auto;
         }
 
         .quote-card h2 {
-            font-size: 1.5rem;
-            margin-bottom: 25px;
+            font-size: 2rem;
+            margin-bottom: 30px;
             color: var(--navy);
             text-align: center;
         }
 
+        .quote-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
         .form-group {
-            margin-bottom: 15px;
+            margin-bottom: 20px;
         }
 
         .form-group label {
             display: block;
             font-size: 0.85rem;
             font-weight: 600;
-            margin-bottom: 5px;
+            margin-bottom: 8px;
             color: var(--text-muted);
         }
 
         .form-control {
             width: 100%;
-            padding: 12px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
+            padding: 14px;
+            border: 1px solid #e1e1e1;
+            border-radius: 6px;
             font-size: 1rem;
             transition: var(--transition);
+            background: #fdfdfd;
         }
 
         .form-control:focus {
             outline: none;
             border-color: var(--accent-blue);
-            box-shadow: 0 0 0 3px rgba(30, 111, 187, 0.1);
+            box-shadow: 0 0 0 4px rgba(30, 111, 187, 0.05);
+            background: #fff;
         }
 
         .pill-group {
             display: flex;
             flex-wrap: wrap;
-            gap: 8px;
-            margin-bottom: 20px;
+            gap: 10px;
+            margin-top: 10px;
         }
 
         .pill {
-            padding: 8px 16px;
+            padding: 10px 20px;
             background: var(--slate);
-            border-radius: 20px;
+            border-radius: 30px;
             font-size: 0.85rem;
             cursor: pointer;
-            font-weight: 500;
+            font-weight: 600;
             transition: var(--transition);
+            border: 1px solid transparent;
         }
 
         .pill.active {
             background: var(--navy);
             color: var(--white);
+            border-color: var(--navy);
+        }
+
+        .pill:hover:not(.active) {
+            background: #e9ecef;
         }
 
         /* Services Grid */
@@ -261,89 +290,80 @@
 
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
         }
 
         .service-card {
-            padding: 40px;
+            padding: 45px;
             background: var(--white);
-            border: 1px solid #eee;
-            border-radius: 8px;
+            border: 1px solid #f0f0f0;
+            border-radius: 12px;
             transition: var(--transition);
+            position: relative;
+            overflow: hidden;
         }
 
         .service-card:hover {
             transform: translateY(-10px);
             border-color: var(--accent-blue);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.05);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+        }
+
+        .service-card::after {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 4px; height: 0;
+            background: var(--cta-orange);
+            transition: var(--transition);
+        }
+
+        .service-card:hover::after {
+            height: 100%;
         }
 
         .service-icon {
             font-size: 2.5rem;
-            color: var(--accent-blue);
             margin-bottom: 25px;
+            display: inline-block;
         }
 
         .service-card h3 {
-            font-size: 1.4rem;
+            font-size: 1.5rem;
             margin-bottom: 15px;
             color: var(--navy);
         }
 
         .service-card p {
             color: var(--text-muted);
-            font-size: 0.95rem;
+            font-size: 1rem;
         }
 
-        /* Why Us Section */
-        .why-us {
-            background: var(--navy);
-            color: var(--white);
-            padding: 100px 0;
+        /* About Section */
+        #about {
+            background: #f8fafc;
         }
 
-        .why-grid {
+        .about-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 80px;
             align-items: center;
         }
 
-        .why-list {
-            list-style: none;
-        }
-
-        .why-item {
-            display: flex;
-            gap: 20px;
-            margin-bottom: 30px;
-        }
-
-        .check-circle {
-            width: 32px;
-            height: 32px;
-            background: var(--cta-orange);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-shrink: 0;
-        }
-
-        .why-item h4 {
-            font-size: 1.2rem;
-            margin-bottom: 5px;
-        }
-
-        .why-item p {
-            color: rgba(255, 255, 255, 0.6);
-            font-size: 0.9rem;
+        .about-tag {
+            color: var(--cta-orange);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 0.8rem;
+            margin-bottom: 15px;
+            display: block;
         }
 
         /* Footer */
         footer {
-            padding: 80px 0 30px;
+            padding: 100px 0 40px;
             background: #051120;
             color: var(--white);
         }
@@ -351,14 +371,16 @@
         .footer-grid {
             display: grid;
             grid-template-columns: 1.5fr 1fr 1fr 1fr;
-            gap: 40px;
-            margin-bottom: 60px;
+            gap: 60px;
+            margin-bottom: 80px;
         }
 
         .footer-col h5 {
             font-size: 1.1rem;
             margin-bottom: 25px;
             color: var(--white);
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
         .footer-col ul {
@@ -366,7 +388,7 @@
         }
 
         .footer-col ul li {
-            margin-bottom: 12px;
+            margin-bottom: 15px;
         }
 
         .footer-col ul li a {
@@ -381,18 +403,20 @@
 
         .copyright {
             text-align: center;
-            padding-top: 30px;
+            padding-top: 40px;
             border-top: 1px solid rgba(255, 255, 255, 0.05);
             color: rgba(255, 255, 255, 0.3);
-            font-size: 0.85rem;
+            font-size: 0.9rem;
         }
 
         @media (max-width: 992px) {
-            .hero { height: auto; padding: 140px 0 80px; }
-            .hero-grid { grid-template-columns: 1fr; }
-            .hero-content h1 { font-size: 2.8rem; }
-            .why-grid { grid-template-columns: 1fr; gap: 40px; }
+            .hero h1 { font-size: 2.5rem; }
+            .hero-stats { flex-wrap: wrap; gap: 30px; }
+            .quote-grid { grid-template-columns: 1fr; }
+            .quote-card { padding: 30px; }
+            .about-grid { grid-template-columns: 1fr; gap: 40px; }
             .footer-grid { grid-template-columns: 1fr 1fr; }
+            .nav-links { display: none; }
         }
     </style>
 </head>
@@ -401,67 +425,69 @@
     <nav id="navbar">
         <div class="container nav-flex">
             <a href="../" class="logo">MERCHANDS</a>
-            <div style="display: flex; align-items: center; gap: 40px;">
+            <div class="nav-right">
                 <div class="nav-links">
-                    <a href="../">Aggregator Home</a>
-                    <a href="../about.html">About Us</a>
+                    <a href="../">Home</a>
+                    <a href="#about">About</a>
                     <a href="#services">Services</a>
                     <a href="#quote">Get Quote</a>
                 </div>
-                <a href="tel:919944635089" class="btn btn-orange" style="white-space: nowrap;">+91 99446 35089</a>
+                <a href="tel:919944635089" class="btn btn-orange">+91 99446 35089</a>
             </div>
         </div>
     </nav>
 
     <header class="hero">
-        <div class="container">
-            <div class="hero-grid">
-                <div class="hero-content">
-                    <h1>Your Trusted Partner for Global Freight Solutions</h1>
-                    <p>IATA accredited, Govt. Licensed MTO, and licensed Customs Broker. Handling 42,300+ shipments across 185 countries with precision since 2009.</p>
-                    
-                    <div class="trust-strip-hero">
-                        <div class="trust-item-hero">
-                            <span>42k+</span>
-                            <span>Shipments</span>
-                        </div>
-                        <div class="trust-item-hero">
-                            <span>185</span>
-                            <span>Countries</span>
-                        </div>
-                        <div class="trust-item-hero">
-                            <span>15+</span>
-                            <span>Years Exp.</span>
-                        </div>
-                    </div>
+        <div class="container hero-content">
+            <h1>Global Freight Solutions with Unmatched Precision</h1>
+            <p>Your IATA accredited and Govt. licensed MTO partner. Handling critical cargo across 185 countries since 2009 with a commitment to reliability and ethical standards.</p>
+            
+            <div style="display: flex; gap: 20px; justify-content: center;">
+                <a href="#quote" class="btn btn-orange" style="padding: 15px 40px;">Request a Quote</a>
+                <a href="https://wa.me/919944635089" class="btn" style="background: #25D366; color: white; padding: 15px 40px;">WhatsApp Us</a>
+            </div>
 
-                    <div style="display: flex; gap: 20px;">
-                        <a href="#services" class="btn" style="background: rgba(255,255,255,0.1); color: white; border: 1px solid rgba(255,255,255,0.3);">Our Services</a>
-                        <a href="https://wa.me/919944635089" class="btn" style="background: #25D366; color: white;">WhatsApp Us</a>
-                    </div>
+            <div class="hero-stats">
+                <div class="hero-stat-item">
+                    <div>42k+</div>
+                    <div>Shipments</div>
                 </div>
+                <div class="hero-stat-item">
+                    <div>185</div>
+                    <div>Countries</div>
+                </div>
+                <div class="hero-stat-item">
+                    <div>15+</div>
+                    <div>Years</div>
+                </div>
+            </div>
+        </div>
+    </header>
 
-                <div class="quote-form-container" id="quote">
-                    <div class="quote-card">
-                        <h2>Get Free Freight Quote</h2>
-                        <form id="logisticsLeadForm">
-                            <input type="hidden" name="shipment_type" id="shipment_type_val" value="sea">
-                            
+    <section class="quote-section" id="quote">
+        <div class="container">
+            <div class="quote-card">
+                <h2>Get a Personalized Freight Quote</h2>
+                <form id="logisticsLeadForm">
+                    <input type="hidden" name="service_category" value="logistics">
+                    <input type="hidden" name="shipment_type" id="shipment_type_val" value="sea">
+                    
+                    <div class="quote-grid">
+                        <div>
                             <div class="form-group">
                                 <label>Full Name</label>
                                 <input type="text" name="name" class="form-control" placeholder="John Doe" required>
                             </div>
-                            
                             <div class="form-group">
                                 <label>Business Email</label>
                                 <input type="email" name="email" class="form-control" placeholder="john@company.com" required>
                             </div>
-
                             <div class="form-group">
                                 <label>Phone / WhatsApp</label>
-                                <input type="tel" name="phone" class="form-control" placeholder="+91..." required>
+                                <input type="tel" name="phone" class="form-control" placeholder="+91 00000 00000" required>
                             </div>
-
+                        </div>
+                        <div>
                             <div class="form-group">
                                 <label>Shipment Type</label>
                                 <div class="pill-group">
@@ -471,8 +497,7 @@
                                     <div class="pill" onclick="setPill(this, 'customs')">Customs</div>
                                 </div>
                             </div>
-
-                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
                                 <div class="form-group">
                                     <label>Origin</label>
                                     <input type="text" name="origin" class="form-control" placeholder="City/Port">
@@ -482,101 +507,105 @@
                                     <input type="text" name="destination" class="form-control" placeholder="City/Port">
                                 </div>
                             </div>
-
-                            <button type="submit" class="btn btn-orange" style="width: 100%; margin-top: 10px;">Request Quote &rarr;</button>
-                        </form>
+                            <div class="form-group">
+                                <label>Additional Requirements</label>
+                                <input type="text" name="message" class="form-control" placeholder="Optional notes...">
+                            </div>
+                        </div>
                     </div>
+                    <button type="submit" class="btn btn-orange" style="width: 100%; margin-top: 20px; padding: 18px;">Submit Quote Request &rarr;</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div>
+                    <span class="about-tag">About Merchands</span>
+                    <h2 style="font-size: 2.5rem; color: var(--navy); margin-bottom: 25px;">Leading the Global Logistics Revolution</h2>
+                    <p style="font-size: 1.1rem; color: var(--text-muted); margin-bottom: 25px;">Founded in 2009, Merchands.com has evolved into a premier logistics hub, providing seamless end-to-end solutions for businesses worldwide.</p>
+                    <p style="color: var(--text-muted); margin-bottom: 30px;">As a division of the Trisora Group, we combine deep industry expertise with cutting-edge technology to ensure your cargo moves efficiently across borders. We are more than just a freight forwarder; we are your strategic growth partner.</p>
+                    
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px;">
+                        <div>
+                            <h4 style="color: var(--navy); margin-bottom: 10px;">Our Vision</h4>
+                            <p style="font-size: 0.9rem; color: var(--text-muted);">To simplify global trade through transparent, reliable, and data-driven logistics solutions.</p>
+                        </div>
+                        <div>
+                            <h4 style="color: var(--navy); margin-bottom: 10px;">Our Mission</h4>
+                            <p style="font-size: 0.9rem; color: var(--text-muted);">Empowering businesses to scale by removing the friction from international supply chains.</p>
+                        </div>
+                    </div>
+                </div>
+                <div style="background: var(--navy); padding: 60px; border-radius: 20px; color: white;">
+                    <h3 style="color: var(--cta-orange); margin-bottom: 20px;">Why Merchands?</h3>
+                    <ul style="list-style: none;">
+                        <li style="margin-bottom: 20px; display: flex; gap: 15px;">
+                            <span style="color: var(--cta-orange);">✓</span>
+                            <div>
+                                <strong>IATA Accredited</strong>
+                                <p style="font-size: 0.85rem; color: rgba(255,255,255,0.6);">Direct access to major airlines and priority cargo space.</p>
+                            </div>
+                        </li>
+                        <li style="margin-bottom: 20px; display: flex; gap: 15px;">
+                            <span style="color: var(--cta-orange);">✓</span>
+                            <div>
+                                <strong>Licensed MTO</strong>
+                                <p style="font-size: 0.85rem; color: rgba(255,255,255,0.6);">Authorized for multimodal transport with full liability coverage.</p>
+                            </div>
+                        </li>
+                        <li style="margin-bottom: 20px; display: flex; gap: 15px;">
+                            <span style="color: var(--cta-orange);">✓</span>
+                            <div>
+                                <strong>Customs Brokerage</strong>
+                                <p style="font-size: 0.85rem; color: rgba(255,255,255,0.6);">In-house licensing for faster clearance and compliance management.</p>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
-    </header>
+    </section>
 
     <section class="section" id="services">
         <div class="container">
             <div class="section-title">
-                <h2>Our Core Logistics Services</h2>
-                <p>Comprehensive solutions tailored for exporters and importers worldwide.</p>
+                <h2>Our Specialized Solutions</h2>
+                <p>Tailored freight and logistics strategies for every business need.</p>
             </div>
 
             <div class="services-grid">
                 <div class="service-card">
                     <div class="service-icon">🚢</div>
                     <h3>Sea Freight</h3>
-                    <p>FCL and LCL solutions for worldwide ports. Competitive rates and reliable scheduling.</p>
+                    <p>Global FCL and LCL shipping with real-time tracking and competitive transit times.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">✈️</div>
                     <h3>Air Freight</h3>
-                    <p>Priority and economy air shipping for time-sensitive cargo. Global airport-to-airport coverage.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">📄</div>
-                    <h3>Customs Clearance</h3>
-                    <p>Licensed in-house customs brokerage to handle complex compliance and documentation.</p>
+                    <p>Express and economy air solutions for time-critical shipments worldwide.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">🏗️</div>
                     <h3>Project Cargo</h3>
-                    <p>Expert handling of heavy machinery and out-of-gauge equipment for large-scale projects.</p>
+                    <p>Expert handling of oversized machinery and complex industrial project moves.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">📄</div>
+                    <h3>Customs Clearance</h3>
+                    <p>Hassle-free documentation and compliance handling at major global ports.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">🚚</div>
                     <h3>Multimodal</h3>
-                    <p>Integrated land, sea, and air transport for optimized delivery times and costs.</p>
+                    <p>Integrated transport chains combining land, sea, and air for optimal efficiency.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">📦</div>
                     <h3>Warehousing</h3>
-                    <p>Secure storage, inventory management, and distribution at key global hubs.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="why-us">
-        <div class="container">
-            <div class="why-grid">
-                <div>
-                    <h2 style="font-size: 2.5rem; margin-bottom: 30px;">Why Choose Merchands.com?</h2>
-                    <p style="color: rgba(255,255,255,0.6); margin-bottom: 40px; font-size: 1.1rem;">We don't just move cargo; we manage your entire supply chain with government-backed credentials and ethical practices.</p>
-                    
-                    <div class="why-list">
-                        <div class="why-item">
-                            <div class="check-circle">✓</div>
-                            <div>
-                                <h4>In-House Customs Brokerage</h4>
-                                <p>We own our licenses, ensuring no third-party delays in clearing your goods.</p>
-                            </div>
-                        </div>
-                        <div class="why-item">
-                            <div class="check-circle">✓</div>
-                            <div>
-                                <h4>Global Network, Local Expertise</h4>
-                                <p>Partners in 185 countries with deep knowledge of local trade regulations.</p>
-                            </div>
-                        </div>
-                        <div class="why-item">
-                            <div class="check-circle">✓</div>
-                            <div>
-                                <h4>Single Window Communication</h4>
-                                <p>A dedicated account manager handles your shipment from origin to destination.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div style="background: rgba(255,255,255,0.05); padding: 50px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.1);">
-                    <h3 style="margin-bottom: 20px;">The Merchands Advantage</h3>
-                    <p style="margin-bottom: 30px; line-height: 1.8;">Founded in 2009, we have established ourselves as a premier logistics provider. Our IATA and MTO certifications are a testament to our quality standards.</p>
-                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; text-align: center;">
-                        <div style="padding: 20px; background: rgba(232, 98, 10, 0.1); border-radius: 8px;">
-                            <div style="font-size: 1.5rem; font-weight: 700; color: var(--cta-orange);">320+</div>
-                            <div style="font-size: 0.7rem; text-transform: uppercase;">Active Clients</div>
-                        </div>
-                        <div style="padding: 20px; background: rgba(232, 98, 10, 0.1); border-radius: 8px;">
-                            <div style="font-size: 1.5rem; font-weight: 700; color: var(--cta-orange);">99.8%</div>
-                            <div style="font-size: 0.7rem; text-transform: uppercase;">Success Rate</div>
-                        </div>
-                    </div>
+                    <p>Secure storage and 3PL distribution solutions at key strategic logistics hubs.</p>
                 </div>
             </div>
         </div>
@@ -586,15 +615,15 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-col">
-                    <a href="/" class="logo" style="color: white; font-size: 1.8rem;">MERCHANDS</a>
-                    <p style="margin-top: 20px; color: rgba(255,255,255,0.4);">A division of Trisora Group. Your global business growth engine.</p>
+                    <a href="../" class="logo" style="color: white; font-size: 1.8rem;">MERCHANDS</a>
+                    <p style="margin-top: 25px; color: rgba(255,255,255,0.4); line-height: 1.8;">Your global business growth engine. Providing integrated solutions for the modern enterprise.</p>
                 </div>
                 <div class="footer-col">
-                    <h5>Logistics</h5>
+                    <h5>Services</h5>
                     <ul>
                         <li><a href="#services">Sea Freight</a></li>
                         <li><a href="#services">Air Freight</a></li>
-                        <li><a href="#services">Customs Brokerage</a></li>
+                        <li><a href="#services">Customs Clearance</a></li>
                         <li><a href="#services">Project Cargo</a></li>
                     </ul>
                 </div>
@@ -602,19 +631,19 @@
                     <h5>Links</h5>
                     <ul>
                         <li><a href="../">Aggregator Home</a></li>
-                        <li><a href="../about.html">About Us</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="../about.html">Corporate Group</a></li>
                         <li><a href="../admin/login.php">Admin Portal</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
                     <h5>Contact</h5>
-                    <p style="font-size: 0.9rem; color: rgba(255,255,255,0.5);">+91 99446 35089</p>
-                    <p style="font-size: 0.9rem; color: rgba(255,255,255,0.5);">support@merchands.com</p>
-                    <p style="font-size: 0.9rem; color: rgba(255,255,255,0.5); margin-top: 10px;">Chennai, Mumbai, Bangalore</p>
+                    <p style="color: rgba(255,255,255,0.6); font-size: 0.95rem; margin-bottom: 10px;">+91 99446 35089</p>
+                    <p style="color: rgba(255,255,255,0.6); font-size: 0.95rem;">support@merchands.com</p>
                 </div>
             </div>
             <div class="copyright">
-                &copy; 2026 Merchands.com &middot; IATA Accredited &middot; MTO Licensed &middot; All Rights Reserved.
+                &copy; 2026 Merchands.com &middot; A Division of Trisora Group &middot; All Rights Reserved.
             </div>
         </div>
     </footer>
@@ -636,7 +665,7 @@
             e.preventDefault();
             const btn = e.target.querySelector('button');
             const originalText = btn.innerHTML;
-            btn.innerHTML = 'Sending...';
+            btn.innerHTML = 'Processing...';
             btn.disabled = true;
 
             const formData = new FormData(e.target);
@@ -648,17 +677,21 @@
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify(data)
                 });
+                
                 const result = await response.json();
+                
                 if (result.success) {
                     window.location.href = 'thankyou.php?ref=' + result.ref;
                 } else {
-                    alert('Submission failed. Please try again.');
+                    // Show detailed error if available
+                    const errorMsg = result.errors ? Object.values(result.errors).join('\n') : (result.error || 'Unknown error');
+                    alert('Submission failed:\n' + errorMsg);
                     btn.innerHTML = originalText;
                     btn.disabled = false;
                 }
             } catch (err) {
                 console.error(err);
-                alert('Connection error. Please check your internet.');
+                alert('Connection error. Please check if your local database is running.');
                 btn.innerHTML = originalText;
                 btn.disabled = false;
             }
