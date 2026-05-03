@@ -128,6 +128,37 @@ include '../includes/header.php';
         </div>
     </section>
 
+    <section class="section-white">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 60px;">
+                <span class="section-tag">Value Proposition</span>
+                <h2 style="font-size: 2.8rem; color: var(--navy);">Why Partner with Merchands Logistics?</h2>
+            </div>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px;">
+                <div>
+                    <h4 style="color: var(--gold); margin-bottom: 15px; font-size: 1.2rem; font-weight: 700;">Single-Window Solutions</h4>
+                    <p style="color: #666; line-height: 1.7;">End-to-end logistics coordination from initial pick-up to final doorstep delivery, ensuring a hassle-free experience.</p>
+                </div>
+                <div>
+                    <h4 style="color: var(--gold); margin-bottom: 15px; font-size: 1.2rem; font-weight: 700;">Direct Customs Control</h4>
+                    <p style="color: #666; line-height: 1.7;">Leveraging in-house licensed brokerage partners for rapid clearance without the delays of traditional middlemen.</p>
+                </div>
+                <div>
+                    <h4 style="color: var(--gold); margin-bottom: 15px; font-size: 1.2rem; font-weight: 700;">Strategic Global Ties</h4>
+                    <p style="color: #666; line-height: 1.7;">Strong, long-standing relationships with major airlines and port authorities worldwide for priority space and competitive rates.</p>
+                </div>
+                <div>
+                    <h4 style="color: var(--gold); margin-bottom: 15px; font-size: 1.2rem; font-weight: 700;">Ethical & Transparent</h4>
+                    <p style="color: #666; line-height: 1.7;">Zero hidden costs and 100% compliance with international trade laws, ensuring your business is always protected.</p>
+                </div>
+                <div>
+                    <h4 style="color: var(--gold); margin-bottom: 15px; font-size: 1.2rem; font-weight: 700;">Global Partner Network</h4>
+                    <p style="color: #666; line-height: 1.7;">An extensive international presence with vetted partners in every major trade hub across the globe.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <script>
         function setPill(el, val) {
             document.querySelectorAll('.pill').forEach(p => p.classList.remove('active'));
