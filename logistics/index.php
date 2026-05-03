@@ -25,13 +25,13 @@ include '../includes/header.php';
                             <span style="color: #4BB543;">✓</span> IATA Accredited Partners
                         </div>
                         <div style="display: flex; align-items: center; gap: 12px; color: white; font-size: 0.9rem;">
-                            <span style="color: #4BB543;">✓</span> Serving 185+ Countries
+                            <span style="color: #4BB543;">✓</span> Serving 185+ Countries through our Partners
                         </div>
                         <div style="display: flex; align-items: center; gap: 12px; color: white; font-size: 0.9rem;">
                             <span style="color: #4BB543;">✓</span> Licensed MTO Partners
                         </div>
                         <div style="display: flex; align-items: center; gap: 12px; color: white; font-size: 0.9rem;">
-                            <span style="color: #4BB543;">✓</span> 42,300+ Shipments Delivered
+                            <span style="color: #4BB543;">✓</span> Our Partners Delivered 42,300+ Shipments
                         </div>
                     </div>
 
