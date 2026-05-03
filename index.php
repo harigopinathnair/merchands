@@ -85,7 +85,7 @@ include 'includes/header.php';
                 <a href="logistics/" style="background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.08); padding: 50px; border-radius: 16px; transition: var(--transition); text-decoration: none; color: inherit; display: block;">
                     <div style="font-size: 3rem; margin-bottom: 25px; color: var(--gold);">🚚</div>
                     <h3 style="font-size: 1.6rem; margin-bottom: 15px; color: white;">Global Logistics</h3>
-                    <p style="color: var(--slate); font-size: 1rem; line-height: 1.7; margin-bottom: 25px;">Comprehensive sea, air, and land freight solutions. IATA & MTO certified handling for critical cargo.</p>
+                    <p style="color: var(--slate); font-size: 1rem; line-height: 1.7; margin-bottom: 25px;">Comprehensive sea, air, and land freight solutions. Handling through IATA & MTO certified partners for critical cargo.</p>
                     <span style="color: var(--gold); font-weight: 700; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 1px;">Access Portal &rarr;</span>
                 </a>
 

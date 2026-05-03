@@ -11,7 +11,7 @@ include '../includes/header.php';
                 <div class="hero-content">
                     <span class="section-tag">Logistics Hub</span>
                     <h1 class="hero-title">Global Freight Solutions with Precision</h1>
-                    <p style="font-size: 1.2rem; color: var(--slate); margin-bottom: 45px; max-width: 650px;">IATA accredited and Govt. licensed MTO partner. Handling critical cargo globally with precision and a commitment to reliability.</p>
+                    <p style="font-size: 1.2rem; color: var(--slate); margin-bottom: 45px; max-width: 650px;">Connecting you with IATA accredited and Govt. licensed MTO partners. Handling critical cargo globally with precision through our vetted network.</p>
                     <div style="display: flex; gap: 20px;">
                         <a href="#services" class="btn">Our Services</a>
                         <a href="https://wa.me/919944635089" class="btn" style="background: #25D366; color: white; border: none;">WhatsApp Us</a>
@@ -68,9 +68,9 @@ include '../includes/header.php';
                 <div style="background: var(--navy); padding: 60px; border-radius: 20px; color: white; box-shadow: 0 30px 60px rgba(0, 33, 71, 0.15);">
                     <h3 style="color: var(--gold); margin-bottom: 30px; font-size: 1.8rem; font-weight: 700;">Why Merchands?</h3>
                     <ul style="list-style: none;">
-                        <li style="margin-bottom: 25px; display: flex; gap: 20px; font-size: 1.1rem; align-items: center;"><span style="background: var(--gold); color: white; width: 28px; height: 28px; display: flex; align-items: center; justify-content: center; border-radius: 50%; font-size: 0.8rem;">✓</span> IATA Accredited</li>
-                        <li style="margin-bottom: 25px; display: flex; gap: 20px; font-size: 1.1rem; align-items: center;"><span style="background: var(--gold); color: white; width: 28px; height: 28px; display: flex; align-items: center; justify-content: center; border-radius: 50%; font-size: 0.8rem;">✓</span> Licensed MTO Partner</li>
-                        <li style="margin-bottom: 0; display: flex; gap: 20px; font-size: 1.1rem; align-items: center;"><span style="background: var(--gold); color: white; width: 28px; height: 28px; display: flex; align-items: center; justify-content: center; border-radius: 50%; font-size: 0.8rem;">✓</span> Licensed Customs Broker</li>
+                        <li style="margin-bottom: 25px; display: flex; gap: 20px; font-size: 1.1rem; align-items: center;"><span style="background: var(--gold); color: white; width: 28px; height: 28px; display: flex; align-items: center; justify-content: center; border-radius: 50%; font-size: 0.8rem;">✓</span> IATA Accredited Partners</li>
+                        <li style="margin-bottom: 25px; display: flex; gap: 20px; font-size: 1.1rem; align-items: center;"><span style="background: var(--gold); color: white; width: 28px; height: 28px; display: flex; align-items: center; justify-content: center; border-radius: 50%; font-size: 0.8rem;">✓</span> Licensed MTO Partners</li>
+                        <li style="margin-bottom: 0; display: flex; gap: 20px; font-size: 1.1rem; align-items: center;"><span style="background: var(--gold); color: white; width: 28px; height: 28px; display: flex; align-items: center; justify-content: center; border-radius: 50%; font-size: 0.8rem;">✓</span> Licensed Customs Brokers</li>
                     </ul>
                 </div>
             </div>
