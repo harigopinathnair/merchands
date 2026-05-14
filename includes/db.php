@@ -3,9 +3,14 @@
 
 function getDbConnection(): PDO {
     $isLocal = (
-        isset($_SERVER['SERVER_NAME']) &&
-        in_array($_SERVER['REMOTE_ADDR'] ?? '', ['127.0.0.1', '::1']) || php_sapi_name() === 'cli'
-    ) || php_uname('n') === 'localhost';
+        isset($_SERVER['REMOTE_ADDR']) && 
+        in_array($_SERVER['REMOTE_ADDR'], ['127.0.0.1', '::1'])
+    ) || (php_sapi_name() === 'cli' && php_uname('n') === 'localhost');
+
+    // Explicitly override for production domain
+    if (isset($_SERVER['SERVER_NAME']) && strpos($_SERVER['SERVER_NAME'], 'merchands.com') !== false) {
+        $isLocal = false;
+    }
 
     if ($isLocal) {
         $host   = 'localhost';
