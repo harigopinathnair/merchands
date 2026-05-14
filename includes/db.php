@@ -4,12 +4,12 @@
 function getDbConnection(): PDO {
     $isLocal = (
         isset($_SERVER['SERVER_NAME']) &&
-        in_array($_SERVER['SERVER_NAME'], ['localhost', '127.0.0.1', '::1'])
+        in_array($_SERVER['REMOTE_ADDR'] ?? '', ['127.0.0.1', '::1']) || php_sapi_name() === 'cli'
     ) || php_uname('n') === 'localhost';
 
     if ($isLocal) {
         $host   = 'localhost';
-        $dbName = 'nqatsxqe_merchands2026';
+        $dbName = 'merchands';
         $user   = 'root';
         $pass   = '';
         $port   = '3306';

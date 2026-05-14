@@ -29,6 +29,11 @@ function sendLeadNotifications($leadData) {
     $firstName = explode(' ', $name)[0];
 
     try {
+        if (!class_exists('PHPMailer\PHPMailer\PHPMailer')) {
+            error_log("PHPMailer not found. Lead [{$refId}] data: " . json_encode($leadData));
+            return;
+        }
+
         $mail = new PHPMailer(true);
         $mail->isSMTP();
         $mail->Host       = $smtpHost;

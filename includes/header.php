@@ -112,6 +112,58 @@ $base_url = (isset($is_sub_page) && $is_sub_page) ? '../' : './';
             width: 100%;
         }
 
+        /* Dropdown Styles */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: var(--white);
+            min-width: 220px;
+            box-shadow: 0 15px 40px rgba(0, 33, 71, 0.12);
+            border-radius: 8px;
+            padding: 15px 0;
+            z-index: 1100;
+            top: 100%;
+            left: 0;
+            border: 1px solid rgba(0, 33, 71, 0.05);
+            margin-top: 10px;
+            opacity: 0;
+            transform: translateY(10px);
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .dropdown-content a {
+            color: var(--navy) !important;
+            padding: 12px 25px;
+            text-decoration: none;
+            display: block;
+            font-size: 0.8rem !important;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .dropdown-content a:hover {
+            background: rgba(184, 138, 94, 0.05);
+            color: var(--gold) !important;
+            padding-left: 30px;
+        }
+
+        .dropdown-content a::after {
+            display: none;
+        }
+
         .btn {
             display: inline-flex;
             align-items: center;
@@ -291,19 +343,36 @@ $base_url = (isset($is_sub_page) && $is_sub_page) ? '../' : './';
 
     <nav id="navbar">
         <div class="container nav-flex">
-            <a href="<?php echo $base_url; ?>" class="logo">
+            <a href="<?php echo (isset($is_logistics_nav) && $is_logistics_nav) ? '#' : $base_url; ?>" class="logo">
                 <img src="<?php echo $base_url; ?>logo-merchands.png" alt="Merchands Logo">
             </a>
             <div class="nav-links">
                 <?php if (!(isset($is_sub_page) && $is_sub_page)): ?>
                     <a href="<?php echo $base_url; ?>">Home</a>
                 <?php endif; ?>
-                <a href="<?php echo $base_url; ?>about.php">About</a>
-                <a href="<?php echo $base_url; ?>logistics/">Logistics</a>
-                <?php if (basename($_SERVER['PHP_SELF']) == 'index.php' || (isset($_SESSION['form_submitted']) && $_SESSION['form_submitted'])): ?>
+                <?php if (isset($is_logistics_nav) && $is_logistics_nav): ?>
+                    <a href="#about">About</a>
+                    <a href="#why-us">Why Us</a>
+                    <a href="#services">Services</a>
+                    <a href="#quote-form">Contact</a>
+                <?php else: ?>
+                    <a href="<?php echo $base_url; ?>about.php">About</a>
+                    <?php if (!(isset($is_sub_page) && $is_sub_page)): ?>
+                    <div class="dropdown">
+                        <a href="#" style="cursor: default;">Verticals <small style="font-size: 0.6rem; vertical-align: middle;">▼</small></a>
+                        <div class="dropdown-content">
+                            <a href="<?php echo $base_url; ?>logistics/">Logistics Hub</a>
+                            <a href="<?php echo $base_url; ?>#services">Manufacturing</a>
+                            <a href="<?php echo $base_url; ?>#services">Recruitment</a>
+                            <a href="<?php echo $base_url; ?>#services">IT & Digital</a>
+                        </div>
+                    </div>
+                    <?php endif; ?>
+                <?php endif; ?>
+                <?php if (!(isset($is_sub_page) && $is_sub_page) && (basename($_SERVER['PHP_SELF']) == 'index.php' || (isset($_SESSION['form_submitted']) && $_SESSION['form_submitted']))): ?>
                     <a href="<?php echo $base_url; ?>register.php" class="btn" style="padding: 10px 25px; font-size: 0.9rem;">Join Us</a>
                 <?php endif; ?>
             </div>
-            <a href="tel:919944635089" class="btn" style="padding: 10px 20px; font-size: 0.8rem;">+91 99446 35089</a>
+            <a href="tel:919944635089" class="btn" style="padding: 10px 20px; font-size: 0.8rem;">Get Quote Now: +91 99446 35089</a>
         </div>
     </nav>

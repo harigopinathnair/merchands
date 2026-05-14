@@ -18,14 +18,14 @@ $SESSION_TIMEOUT = 8 * 60 * 60; // 8 hours
 // Check session exists
 if (empty($_SESSION['admin_id'])) {
     session_destroy();
-    header('Location: /admin/login.php?error=not_logged_in');
+    header('Location: login.php?error=not_logged_in');
     exit;
 }
 
 // Check session timeout
 if (!empty($_SESSION['login_time']) && (time() - $_SESSION['login_time']) > $SESSION_TIMEOUT) {
     session_destroy();
-    header('Location: /admin/login.php?error=session_expired');
+    header('Location: login.php?error=session_expired');
     exit;
 }
 
@@ -37,7 +37,7 @@ $admin = $stmt->fetch();
 
 if (!$admin) {
     session_destroy();
-    header('Location: /admin/login.php?error=account_disabled');
+    header('Location: login.php?error=account_disabled');
     exit;
 }
 

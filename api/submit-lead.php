@@ -36,7 +36,6 @@ $utm_campaign = trim($input['utm_campaign'] ?? '');
 
 // Validation
 if (empty($name)) $errors['name'] = 'Full name is required';
-if (empty($phone) || strlen($phone) < 7) $errors['phone'] = 'Valid phone number is required';
 if (empty($email) || !filter_var($email, FILTER_VALIDATE_EMAIL)) $errors['email'] = 'Valid business email is required';
 
 if (!empty($errors)) {

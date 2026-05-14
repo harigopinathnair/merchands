@@ -22,6 +22,14 @@ if (isset($_GET['action'])) {
         exit;
     }
 
+    if ($_GET['action'] === 'delete_lead' && $_SERVER['REQUEST_METHOD'] === 'POST') {
+        $data = json_decode(file_get_contents('php://input'), true);
+        $stmt = $pdo->prepare('DELETE FROM leads WHERE id = ?');
+        $stmt->execute([$data['lead_id']]);
+        echo json_encode(['success' => true]);
+        exit;
+    }
+
     if ($_GET['action'] === 'update_status' && $_SERVER['REQUEST_METHOD'] === 'POST') {
         $data = json_decode(file_get_contents('php://input'), true);
         $stmt = $pdo->prepare('UPDATE leads SET status = ? WHERE id = ?');
@@ -152,8 +160,10 @@ $quotedCount = $pdo->query("SELECT COUNT(*) FROM leads WHERE status = 'quoted'")
 
         .btn-view { padding: 4px 12px; background: #eee; border: none; border-radius: 4px; cursor: pointer; font-size: 0.75rem; font-weight: 600; }
         .btn-view:hover { background: #ddd; }
+        .btn-delete { padding: 4px 12px; background: #fee2e2; color: #991b1b; border: 1px solid #fecaca; border-radius: 4px; cursor: pointer; font-size: 0.75rem; font-weight: 600; margin-left: 5px; }
+        .btn-delete:hover { background: #fecaca; }
 
-        .details-panel { background: #fcfcfc; padding: 2rem; border-bottom: 1px solid #eee; display: none; }
+        .details-panel { background: #fcfcfc; padding: 2rem; border-bottom: 1px solid #eee; }
         .details-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
         .detail-item label { display: block; font-size: 0.75rem; color: #888; margin-bottom: 4px; }
         .detail-item span { font-weight: 500; }
@@ -174,11 +184,11 @@ $quotedCount = $pdo->query("SELECT COUNT(*) FROM leads WHERE status = 'quoted'")
 <body>
 
     <header>
-        <a href="/admin/" class="header-logo">Merchands.com</a>
+        <a href="../" class="header-logo">Merchands.com</a>
         <div class="header-title">Leads Dashboard</div>
         <div class="header-user">
             <span><?= htmlspecialchars($_SESSION['admin_name']) ?></span>
-            <a href="/admin/logout.php">Sign out</a>
+            <a href="logout.php">Sign out</a>
         </div>
     </header>
 
@@ -258,7 +268,10 @@ $quotedCount = $pdo->query("SELECT COUNT(*) FROM leads WHERE status = 'quoted'")
                                 <td style="text-transform: capitalize;"><?= $lead['shipment_type'] ?></td>
                                 <td class="hide-mobile" style="font-size: 0.75rem;"><?= htmlspecialchars($lead['origin']) ?> &rarr; <?= htmlspecialchars($lead['destination']) ?></td>
                                 <td><span class="pill <?= $lead['status'] ?>"><?= $lead['status'] ?></span></td>
-                                <td><button class="btn-view" onclick="toggleDetails(<?= $lead['id'] ?>)">View</button></td>
+                                <td>
+                                    <button class="btn-view" onclick="toggleDetails(<?= $lead['id'] ?>)">View</button>
+                                    <button class="btn-delete" onclick="deleteLead(<?= $lead['id'] ?>, '<?= $lead['ref_id'] ?>')">Delete</button>
+                                </td>
                             </tr>
                             <tr id="details-<?= $lead['id'] ?>" class="details-row" style="display: none;">
                                 <td colspan="8" class="details-panel">
@@ -327,6 +340,20 @@ $quotedCount = $pdo->query("SELECT COUNT(*) FROM leads WHERE status = 'quoted'")
                 body: JSON.stringify({ lead_id: id, status: status })
             });
             window.location.reload(); // Simple refresh to update pills/stats
+        }
+
+        async function deleteLead(id, ref) {
+            if (!confirm(`Are you sure you want to delete lead ${ref}? This action cannot be undone.`)) return;
+            
+            const res = await fetch('index.php?action=delete_lead', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ lead_id: id })
+            });
+            const data = await res.json();
+            if (data.success) {
+                window.location.reload();
+            }
         }
 
         // Auto-refresh stats

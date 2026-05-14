@@ -30,6 +30,10 @@ include 'includes/header.php';
                             <input type="email" name="email" class="form-control" placeholder="john@company.com" required>
                         </div>
                         <div style="margin-bottom: 18px;">
+                            <label style="display: block; margin-bottom: 8px; font-size: 0.8rem; color: var(--slate); font-weight: 600; text-transform: uppercase; letter-spacing: 1px;">Phone / WhatsApp</label>
+                            <input type="tel" name="phone" class="form-control" placeholder="+91..." required>
+                        </div>
+                        <div style="margin-bottom: 18px;">
                             <label style="display: block; margin-bottom: 8px; font-size: 0.8rem; color: var(--slate); font-weight: 600; text-transform: uppercase; letter-spacing: 1px;">Primary Interest</label>
                             <select name="service_category" onchange="document.getElementById('service_category_input').value=this.value" class="form-control" style="background: var(--navy);">
                                 <option value="logistics">Global Logistics</option>

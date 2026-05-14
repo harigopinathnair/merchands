@@ -162,7 +162,7 @@ if ($urlError === 'account_disabled') $error = 'This account has been disabled.'
 
     <div>
         <div class="login-card">
-            <span class="logo">Merchands.com</span>
+            <a href="../" class="logo" style="text-decoration: none;">Merchands.com</a>
             <h2>Admin sign in</h2>
 
             <?php if ($error): ?>

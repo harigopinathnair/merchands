@@ -5,7 +5,9 @@ $base_url = (isset($is_sub_page) && $is_sub_page) ? '../' : './';
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-col">
+                <a href="<?php echo $base_url; ?>">
                     <img src="<?php echo $base_url; ?>Footer-logo.png" alt="Merchands Logo" style="height: 50px; margin-bottom: 25px;">
+                </a>
                     <p style="color: rgba(255,255,255,0.4); line-height: 1.8;">Your global business growth engine. Providing integrated solutions for the modern enterprise.</p>
                 </div>
                 <div class="footer-col">

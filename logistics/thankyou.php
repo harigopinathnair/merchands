@@ -179,8 +179,10 @@ try {
 
     <header>
         <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px; display: flex; justify-content: space-between; align-items: center;">
-            <a href="/" style="font-size: 1.5rem; font-weight: 700; color: var(--navy); text-decoration: none;">Merchands.com</a>
-            <a href="tel:[PHONE_NUMBER]" style="color: var(--navy); text-decoration: none; font-weight: 600;">[PHONE_NUMBER]</a>
+            <a href="../" style="display:flex; align-items:center; gap:10px; text-decoration:none;">
+                <img src="../logo-merchands.png" alt="Merchands" style="height:36px;">
+            </a>
+            <a href="tel:+919944635089" style="color: var(--navy); text-decoration: none; font-weight: 600; font-size: 0.9rem;">Get Quote Now: +91 99446 35089</a>
         </div>
     </header>
 
@@ -220,8 +222,8 @@ try {
             </div>
         </div>
 
-        <a href="https://wa.me/[WHATSAPP_NUMBER]?text=Hi%2C+I+just+submitted+a+freight+enquiry+%28Ref%3A+<?= urlencode($row['ref_id']) ?>%29.+Can+you+help+me%3F" class="btn-wa">
-            Message us on WhatsApp &rarr;
+        <a href="https://wa.me/919944635089?text=Hi%2C+I+just+submitted+a+freight+enquiry+%28Ref%3A+<?= urlencode($row['ref_id']) ?>%29.+Can+you+help+me%3F" class="btn-wa">
+            💬 &nbsp; Message us on WhatsApp &rarr;
         </a>
 
         <div class="links">

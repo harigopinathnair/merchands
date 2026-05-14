@@ -1,6 +1,5 @@
--- merchands/database/schema.sql
-
-USE nqatsxqe_merchands2026;
+-- merchands/database/migrate.sql
+-- Run against local DB: mysql -u root merchands < migrate.sql
 
 CREATE TABLE IF NOT EXISTS leads (
   id               INT AUTO_INCREMENT PRIMARY KEY,
@@ -37,9 +36,8 @@ CREATE TABLE IF NOT EXISTS admin_users (
   created_at    TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
--- Seed admin user
--- Default password: changeme123
-INSERT INTO admin_users (username, password_hash, full_name, email)
+-- Default admin password: changeme123
+INSERT IGNORE INTO admin_users (username, password_hash, full_name, email)
 VALUES (
   'admin',
   '$2y$12$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi',

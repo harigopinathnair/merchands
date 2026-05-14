@@ -1,5 +1,6 @@
 <?php 
 $is_sub_page = true;
+$is_logistics_nav = true;
 $page_title = "Logistics Hub | Merchands.com";
 $page_description = "Your trusted logistics company for global freight solutions. IATA accredited and Govt. licensed MTO.";
 include '../includes/header.php'; 
@@ -41,7 +42,7 @@ include '../includes/header.php';
                     </div>
                 </div>
 
-                <div class="form-card">
+                <div class="form-card" id="quote-form">
                     <h3 style="margin-bottom: 15px; color: var(--gold); font-size: 1.3rem; font-weight: 700;">Get Free Quote from Our Trusted Partners</h3>
                     <form id="logisticsLeadForm">
                         <input type="hidden" name="service_category" value="logistics">
@@ -88,7 +89,7 @@ include '../includes/header.php';
                     <p style="font-size: 1.15rem; color: #444; margin-bottom: 30px; line-height: 1.8;">Merchands.com has evolved into a premier logistics hub, providing seamless end-to-end solutions for businesses worldwide.</p>
                     <p style="color: #666; margin-bottom: 40px; line-height: 1.8;">As a division of the Trisora Group, we combine deep industry expertise with cutting-edge technology to ensure your cargo moves efficiently across borders.</p>
                 </div>
-                <div style="background: var(--navy); padding: 60px; border-radius: 20px; color: white; box-shadow: 0 30px 60px rgba(0, 33, 71, 0.15);">
+                <div id="why-us" style="background: var(--navy); padding: 60px; border-radius: 20px; color: white; box-shadow: 0 30px 60px rgba(0, 33, 71, 0.15);">
                     <h3 style="color: var(--gold); margin-bottom: 30px; font-size: 1.8rem; font-weight: 700;">Why Merchands?</h3>
                     <ul style="list-style: none;">
                         <li style="margin-bottom: 25px; display: flex; gap: 20px; font-size: 1.1rem; align-items: center;"><span style="background: var(--gold); color: white; width: 28px; height: 28px; display: flex; align-items: center; justify-content: center; border-radius: 50%; font-size: 0.8rem;">✓</span> IATA Accredited Partners</li>
