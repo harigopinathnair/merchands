@@ -3,12 +3,11 @@
 
 require_once '../includes/db.php';
 
-// Secure session config
 ini_set('session.cookie_httponly', 1);
 if (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on') {
     ini_set('session.cookie_secure', 1);
 }
-ini_set('session.cookie_samesite', 'Strict');
+ini_set('session.cookie_samesite', 'Lax');
 ini_set('session.use_strict_mode', 1);
 
 if (session_status() === PHP_SESSION_NONE) {
@@ -50,7 +49,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
             if ($user && password_verify($password, $user['password_hash'])) {
                 // Success
-                session_regenerate_id(true);
                 $_SESSION['admin_id']    = $user['id'];
                 $_SESSION['admin_user']  = $user['username'];
                 $_SESSION['admin_name']  = $user['full_name'];

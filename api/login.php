@@ -31,7 +31,7 @@ ini_set('session.cookie_httponly', 1);
 if (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on') {
     ini_set('session.cookie_secure', 1);
 }
-ini_set('session.cookie_samesite', 'Strict');
+ini_set('session.cookie_samesite', 'Lax');
 ini_set('session.use_strict_mode', 1);
 
 if (session_status() === PHP_SESSION_NONE) {
@@ -47,7 +47,6 @@ try {
     $admin = $stmt->fetch();
 
     if ($admin && password_verify($password, $admin['password_hash'])) {
-        session_regenerate_id(true);
         $_SESSION['admin_id']   = $admin['id'];
         $_SESSION['admin_user'] = $admin['username'];
         $_SESSION['admin_name'] = $admin['full_name'];
@@ -65,7 +64,6 @@ try {
     $user = $stmt->fetch();
 
     if ($user && password_verify($password, $user['password_hash'])) {
-        session_regenerate_id(true);
         $_SESSION['user_id']   = $user['id'];
         $_SESSION['user_name'] = $user['full_name'];
         $_SESSION['user_role'] = $user['role'];
