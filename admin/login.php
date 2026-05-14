@@ -3,11 +3,21 @@
 
 require_once '../includes/db.php';
 
-session_start();
+// Secure session config
+ini_set('session.cookie_httponly', 1);
+if (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on') {
+    ini_set('session.cookie_secure', 1);
+}
+ini_set('session.cookie_samesite', 'Strict');
+ini_set('session.use_strict_mode', 1);
+
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
 
 // Redirect if already logged in
 if (!empty($_SESSION['admin_id'])) {
-    header('Location: /admin/');
+    header('Location: ./');
     exit;
 }
 
@@ -34,8 +44,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $password = $_POST['password'] ?? '';
 
             $pdo = getDbConnection();
-            $stmt = $pdo->prepare('SELECT * FROM admin_users WHERE username = ? AND is_active = 1');
-            $stmt->execute([$username]);
+            $stmt = $pdo->prepare('SELECT * FROM admin_users WHERE (username = ? OR email = ?) AND is_active = 1');
+            $stmt->execute([$username, $username]);
             $user = $stmt->fetch();
 
             if ($user && password_verify($password, $user['password_hash'])) {
@@ -49,7 +59,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 
                 $pdo->prepare('UPDATE admin_users SET last_login = NOW() WHERE id = ?')->execute([$user['id']]);
                 
-                header('Location: /admin/');
+                header('Location: ./');
                 exit;
             } else {
                 // Fail
