@@ -142,6 +142,16 @@ $base_url = (isset($is_sub_page) && $is_sub_page) ? '../' : './';
             transform: translateY(0);
         }
 
+        /* Bridge to prevent glitchy mouse exit */
+        .dropdown-content::before {
+            content: '';
+            position: absolute;
+            top: -15px;
+            left: 0;
+            width: 100%;
+            height: 15px;
+        }
+
         .dropdown-content a {
             color: var(--navy) !important;
             padding: 12px 25px;

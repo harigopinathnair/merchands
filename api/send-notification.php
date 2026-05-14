@@ -92,7 +92,7 @@ function sendLeadNotifications($leadData) {
                     </ol>
                 </div>
                 <p style='text-align: center; margin-top: 30px;'>
-                    <a href='https://wa.me/919944635089?text=Hi%2C+I+just+submitted+a+freight+enquiry+%28Ref%3A+{$refId}%29' style='background-color: #25D366; color: white; padding: 12px 24px; text-decoration: none; border-radius: 4px;'>Message us on WhatsApp &rarr;</a>
+
                 </p>
             </div>
         ";

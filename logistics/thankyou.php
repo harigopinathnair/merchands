@@ -222,9 +222,7 @@ try {
             </div>
         </div>
 
-        <a href="https://wa.me/919944635089?text=Hi%2C+I+just+submitted+a+freight+enquiry+%28Ref%3A+<?= urlencode($row['ref_id']) ?>%29.+Can+you+help+me%3F" class="btn-wa">
-            💬 &nbsp; Message us on WhatsApp &rarr;
-        </a>
+
 
         <div class="links">
             <a href="/">&larr; Back to Merchands.com</a>
