@@ -17,7 +17,7 @@ function getDbConnection(): PDO {
         $host   = 'localhost';
         $dbName = 'nqatsxqe_merchands2026';
         $user   = 'nqatsxqe_2026merchands';
-        $pass   = 'Rankmonk_123@';
+        $pass   = '9884208016@';
         $port   = '3306';
     }
 
